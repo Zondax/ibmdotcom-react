@@ -28,13 +28,13 @@ var prefix = settings.prefix;
  */
 
 var _findMenuItems = function _findMenuItems() {
-  var eles = document.querySelectorAll('a[name]');
+  var eles = document.querySelectorAll('a[class*="AutolinkHeader-module--anchor"]');
   var menuItems = [];
   eles.forEach(function (element) {
-    if (element.getAttribute('name') !== 'menuLabel') {
+    if (element.getAttribute('href') !== 'menuLabel') {
       menuItems.push({
-        id: element.getAttribute('name'),
-        title: element.getAttribute('data-title') || ''
+        id: element.getAttribute('href'),
+        title: element.getAttribute('aria-label') || ''
       });
     }
   });
@@ -144,7 +144,7 @@ var TableOfContents = function TableOfContents(_ref) {
       return elem.height === null ? arr[index - 1].position < arr[index - 1].height : elem.position - 50 > -elem.height;
     });
 
-    return items[0].elem.getAttribute('name');
+    return items[0].elem.getAttribute('href');
   };
   /**
    * Sets the selected menu item
@@ -249,7 +249,7 @@ TableOfContents.propTypes = {
    * follow the following format:
    *
    * ```html
-   * <a name="name-of-section" data-title="Lorem Ipsum"></a>
+   * <a href="href-of-section" aria-label="Lorem Ipsum"></a>
    * ```
    */
   menuItems: PropTypes.arrayOf(PropTypes.shape({
