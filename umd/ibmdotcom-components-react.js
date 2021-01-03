@@ -39617,7 +39617,7 @@
 
 	  var handleOnClick = function handleOnClick(e, id) {
 	    e.preventDefault();
-	    var selector = "a[name=\"".concat(id, "\"]");
+	    var selector = "a[href=\"".concat(id, "\"]");
 	    smoothScroll(null, selector);
 	    triggerFocus(selector);
 	  };
@@ -39725,7 +39725,7 @@
 	    });
 	    var title = filteredItems[0].title;
 	    updateState(id, title);
-	    var selector = "a[name=\"".concat(id, "\"]");
+	    var selector = "a[href=\"".concat(id, "\"]");
 	    smoothScroll(null, selector, 50);
 	  };
 	  /**
@@ -39932,7 +39932,7 @@
 
 
 	  var getElemsInView = function getElemsInView() {
-	    var items = toConsumableArray$1(document.querySelectorAll('a[href]')).map(function (elem, index, arr) {
+	    var items = toConsumableArray$1(document.querySelectorAll('a[class*="AutolinkHeader-module--anchor"]')).map(function (elem, index, arr) {
 	      return {
 	        elem: elem,
 	        height: arr[index + 1] ? arr[index + 1].getBoundingClientRect().y - elem.getBoundingClientRect().y : null,

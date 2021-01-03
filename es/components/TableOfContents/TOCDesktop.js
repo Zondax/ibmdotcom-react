@@ -59,7 +59,7 @@ var TOCDesktop = function TOCDesktop(_ref) {
 
   var handleOnClick = function handleOnClick(e, id) {
     e.preventDefault();
-    var selector = "a[name=\"".concat(id, "\"]");
+    var selector = "a[href=\"".concat(id, "\"]");
     smoothScroll(null, selector);
     triggerFocus(selector);
   };

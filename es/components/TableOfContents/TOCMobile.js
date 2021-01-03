@@ -45,7 +45,7 @@ var TOCMobile = function TOCMobile(_ref) {
     });
     var title = filteredItems[0].title;
     updateState(id, title);
-    var selector = "a[name=\"".concat(id, "\"]");
+    var selector = "a[href=\"".concat(id, "\"]");
     smoothScroll(null, selector, 50);
   };
   /**

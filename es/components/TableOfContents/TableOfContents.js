@@ -134,7 +134,7 @@ var TableOfContents = function TableOfContents(_ref) {
 
 
   var getElemsInView = function getElemsInView() {
-    var items = _toConsumableArray(document.querySelectorAll('a[name]')).map(function (elem, index, arr) {
+    var items = _toConsumableArray(document.querySelectorAll('a[class*="AutolinkHeader-module--anchor"]')).map(function (elem, index, arr) {
       return {
         elem: elem,
         height: arr[index + 1] ? arr[index + 1].getBoundingClientRect().y - elem.getBoundingClientRect().y : null,
