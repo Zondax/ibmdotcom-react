@@ -38,6 +38,7 @@ var _findMenuItems = function _findMenuItems() {
       });
     }
   });
+  console.log("menuItems from es components TableOfContents TableOfContents.js: ", menuItems);
   return menuItems;
 };
 /**

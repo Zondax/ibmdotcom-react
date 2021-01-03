@@ -39836,6 +39836,7 @@
 	      });
 	    }
 	  });
+	  console.log("menuItems from ibmdotcom-components-react.js: ", menuItems);
 	  return menuItems;
 	};
 	/**
