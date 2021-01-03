@@ -39832,7 +39832,7 @@
 	    if (element.getAttribute('href') !== 'menuLabel') {
 	      menuItems.push({
 			id: element.getAttribute('href'),
-			title: element.getAttribute('aria-label') || ''
+			title: element.getAttribute('aria-label').replace(" permalink", "") || ''
 	      });
 	    }
 	  });
